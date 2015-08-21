@@ -12,23 +12,23 @@ The data file "tidydata.txt" contains 11880 rows and 4 columns, without headers.
 
 The measurements come from the accelerometer and the gyroscope carried by subjects. Using these instruments, a number of parameters (e.g. body acceleration or tBodyAcc) have been measured or estimated with a constant rate of 50 Hz. We have used the following parameters:
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
 
 See more detailed description in "UCI HAR Dataset/README.txt" and "UCI HAR Dataset/features_info.txt". "XYZ" in the names of the parameters mean, that they have been measured separately for X, Y and Z axes. The measurements have been normalised and bounded within [-1,1]. 
 

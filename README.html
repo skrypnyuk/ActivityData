@@ -218,11 +218,9 @@ run_analysis()
 
 <p>What this script essentially does is to compute for each subject (of which there are 30, identified by numbers), for each activity of that subject (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and for each of the selected measurements from the original date the computed mean. There are 30 subjects, 6 activities and 66 selected measurements, altogether 30x6x66=11880 combinations. Accordingly the table saved in &ldquo;tidydata.txt&rdquo; contains 11880 rows and 4 columns. The columns contain the identifiers for subjects, activity and measurement and the computed mean.</p>
 
-<p>It was hard to select features in the original data set that would only contain mean and standard deviation. Finally I have chosen only those features, that definitely represent such variables &ndash; i.e. with &ldquo;mean()&rdquo; and &ldquo;std()&rdquo;. The number of thus selected rows (66) corresponds with the measured number of variables in &ldquo;features.txt&rdquo;. My limited physics knowledge prevents me from discussing more in depth, which features should be included. </p>
+<p>It was a bit hard to select features in the original data set that would only contain mean and standard deviation. Finally I have chosen only those features, that definitely represent such variables &ndash; i.e. with &ldquo;mean()&rdquo; and &ldquo;std()&rdquo; in their names. My limited physics knowledge prevents me from discussing more in depth, which features should be included. </p>
 
-<p>The measurements of interest for us were all those in the original data, which measure the mean and the standard deviation in the raw data. In particular, we computed the mean and the standard deviation tBodyAcc-XYZ (&hellip;) etc. </p>
-
-<p>The created data is tidy because each observation is in a separate row and each variable is in a column. There are the following fixed variables: subject, activity, and measurement, and the following &ldquo;measured&rdquo; variable: mean. </p>
+<p>The created data is tidy because each observation is in a separate row and each variable is in a separate column. There are the following fixed variables: subject, activity, and measurement, and the following &ldquo;measured&rdquo; variable: mean. </p>
 
 </body>
 
