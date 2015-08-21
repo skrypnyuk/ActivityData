@@ -1,0 +1,29 @@
+---
+title: "README.md"
+output: html_document
+---
+
+For running the script "run_analysis.R" you should have downloaded the "UCI HAR Dataset" and unzip it into the current working directory. You should therefore do something like this:   
+
+```{r, eval = FALSE}
+URL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(URL, destfile="./activitydata.zip", method="curl")
+unzip("activitydata.zip")
+```
+
+After downloading the "UCI HAR Dataset" you run the script in this way:
+
+```{r, eval = FALSE}
+source("run_analysis.R")
+run_analysis()
+```
+
+This will produce the file "tidydata.txt" in the current directory. 
+
+What this script essentially does is to compute for each subject (of which there are 30, identified by numbers), for each activity of that subject (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and for each of the selected measurements from the original date the computed mean. There are 30 subjects, 6 activities and 66 selected measurements, altogether 30x6x66=11880 combinations. Accordingly the table saved in "tidydata.txt" contains 11880 rows and 4 columns. The columns contain the identifiers for subjects, activity and measurement and the computed mean.
+
+It was hard to select features in the original data set that would only contain mean and standard deviation. Finally I have chosen only those features, that definitely represent such variables -- i.e. with "mean()" and "std()". The number of thus selected rows (66) corresponds with the measured number of variables in "features.txt". My limited physics knowledge prevents me from discussing more in depth, which features should be included. 
+
+The measurements of interest for us were all those in the original data, which measure the mean and the standard deviation in the raw data. In particular, we computed the mean and the standard deviation tBodyAcc-XYZ (...) etc. 
+
+The created data is tidy because each observation is in a separate row and each variable is in a column. There are the following fixed variables: subject, activity, and measurement, and the following "measured" variable: mean. 
